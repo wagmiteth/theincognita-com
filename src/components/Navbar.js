@@ -1,10 +1,9 @@
 // Navbar.js
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Assuming you have a separate CSS file for styling
-import logo from '../assets/theIncognitaLogo.png'; // Assuming the image is in the same folder
-import closeIcon from '../assets/closex.svg'; // Assuming the image is in the same folder
-
+import logo from '../assets/theIncognitaLogo.png'; 
+import closeIcon from '../assets/closex.svg'; 
 
 const Navbar = () => {
   const openNavMenu = useRef(null);
@@ -13,19 +12,7 @@ const Navbar = () => {
   const menuOverlay = useRef(null);
   const mediaSize = 991;
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > mediaSize) {
-        resizeFix();
-      }
-    };
 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const toggleNav = () => {
     navMenu.current.classList.toggle('open');
@@ -37,6 +24,30 @@ const Navbar = () => {
     navMenu.current.querySelector('.menu-item-has-children.active .sub-menu').removeAttribute('style');
     navMenu.current.querySelector('.menu-item-has-children.active').classList.remove('active');
   };
+
+  const resizeFix = useCallback(() => {
+    if (navMenu.current.classList.contains('open')) {
+      toggleNav();
+    }
+
+    if (navMenu.current.querySelector('.menu-item-has-children.active')) {
+      collapseSubMenu();
+    }
+    }, [navMenu]);
+    
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth > mediaSize) {
+          resizeFix();
+        }
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, [resizeFix]);
 
   const handleMenuClick = (event) => {
     if (event.target.hasAttribute('data-toggle') && window.innerWidth <= mediaSize) {
@@ -56,14 +67,8 @@ const Navbar = () => {
     }
   };
 
-  const resizeFix = () => {
-    if (navMenu.current.classList.contains('open')) {
-      toggleNav();
-    }
-    if (navMenu.current.querySelector('.menu-item-has-children.active')) {
-      collapseSubMenu();
-    }
-  };
+
+  
 
   return (
     <header className="header">
@@ -93,9 +98,7 @@ const Navbar = () => {
                 <Link to="/token">Token</Link>
               </li>
               <li className="menu-item menu-item-has-children">
-                <span data-toggle="sub-menu">
-                  Learn <i className="plus"></i>
-                </span>
+              <span data-toggle="sub-menu">Learn <i className="plus">&#43;</i></span>
                 <ul className="sub-menu">
                   <li className="menu-item">
                     <Link to="/learn/how-to-establish-a-network-state">

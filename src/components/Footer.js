@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="container">
           <p>theingcognita.com</p>
           <p>
-            Made with ❤️ by the community
+            Made with love ❤️ by the community
             <br />
-            Help us at{' '}
+            Contribute at{' '}
             <a href="https://github.com/wagmiteth/theIncognita.github.io" target="_blank" rel="noopener noreferrer">
               Github
             </a>

@@ -11,7 +11,7 @@ const Footer = () => {
             Made with love ❤️ by the community
             <br />
             Contribute at{' '}
-            <a href="https://github.com/wagmiteth/theIncognita.github.io" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/wagmiteth/theincognita-com" target="_blank" rel="noopener noreferrer">
               Github
             </a>
           </p>

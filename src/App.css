@@ -25,14 +25,15 @@ body {
   text-align: left;
   color: var(--text-color);
   overflow-x: hidden;
+  
 }
 .container-content{
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 @media (max-width: 600px) {
-  .content-container {
+  .container-content {
     max-width: 96%;
   }
 }
@@ -57,4 +58,17 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+#blog-header {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  #blog-header {
+    max-width: 96%; 
+  }
 }

@@ -1,7 +1,7 @@
 // Navbar.js
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Assuming you have a separate CSS file for styling
+import './css/Navbar.css'; // Assuming you have a separate CSS file for styling
 import logo from '../assets/theIncognitaLogo.png'; 
 import closeIcon from '../assets/closex.svg'; 
 

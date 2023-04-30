@@ -1,0 +1,115 @@
+
+
+
+/*Tabble starts here*/
+p{
+    display: contents;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td:first-child {
+    width: 48px; /* or the width of your image */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 2px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: white;
+  }
+  .td-left-corners {
+    border-radius: 10px 0px 0px 10px;
+  }
+  .td-right-corners {
+    border-radius: 0px 10px 10px 0px;
+    text-align: right;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 600px) {
+    th:nth-of-type(3),
+    td:nth-of-type(3),
+    th:nth-of-type(4),
+    td:nth-of-type(4),
+    th:nth-of-type(5),
+    td:nth-of-type(5) {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 601px) {
+    th:nth-of-type(2),
+    td:nth-of-type(2) {
+      display: none;
+    }
+    .mobile-only {
+      display: none;
+    }
+  }
+  
+  /*Hide 1:st row mobile */
+  @media screen and (max-width: 600px) {
+    tr:first-child {
+      display: none;
+    }
+  }
+  /*Hide 1:st row mobile */
+  
+  /*Picture and icons*/
+  img {
+    vertical-align: top;
+    height: 40px;
+    margin: 2px 2px;
+  }
+  
+  #social-icons {
+    height: 18px;
+    margin: 0 2px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 50%;
+  }
+  #social-icons:hover {
+    border: 1px solid black;
+  }
+  /* Keep the 5 column 116px wide to prevent  */
+  td:nth-child(5) {
+    width: 116px;
+  }
+  
+  /* Add this style for the CTA button */
+  .cta {
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    padding: 9px 16px;
+    margin-right: 2px;
+    cursor: pointer;
+  }
+  .cta:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /*text-table starts here*/
+  
+  .text-table {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container-table {
+    width: 150px;
+  }

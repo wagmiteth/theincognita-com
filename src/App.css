@@ -27,6 +27,28 @@ body {
   overflow-x: hidden;
   
 }
+h1 {
+  font-size: 32px;
+}
+
+h4 {
+  font-weight: bold;
+  margin: 0px 0px;
+  color: var(--text-color);
+}
+
+h4:hover {
+  color: var(--hover-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
 .container-content{
   max-width: 600px;
   margin: 0px auto;
@@ -71,12 +93,4 @@ body {
   #blog-header {
     max-width: 96%; 
   }
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--hover-color);
 }

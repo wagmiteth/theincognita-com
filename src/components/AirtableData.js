@@ -1,11 +1,12 @@
 // AirtableData.js
 import React, { useState, useEffect } from "react";
 import base from "../Airtable";
-import portaNorte from "../assets/nodeIcons/porta-norte.png";
+import questionSign from "../assets/nodeIcons/questionSign60x60.png";
 import "./css/AirtableData.css";
 import linkIcon from "../assets/link60x60.png";
 import twitterIcon from "../assets/twitter60x60.png";
 import discordIcon from "../assets/discord60x60.png";
+import openseaIcon from "../assets/Opensea.png";
 
 const AirtableData = () => {
   const [records, setRecords] = useState([]);
@@ -14,7 +15,12 @@ const AirtableData = () => {
     const fetchRecords = async () => {
       try {
         const response = await base("ListOfNodes").select().all();
-        setRecords(response.map((record) => record.fields));
+        setRecords(
+          response.map((record) => ({
+            ...record.fields,
+            imageUrl: record.fields.Logo ? record.fields.Logo[0].url : null,
+          }))
+        );
       } catch (error) {
         console.error("Error fetching data from Airtable:", error);
       }
@@ -40,7 +46,7 @@ const AirtableData = () => {
           <tr key={index}>
             <td className="td-left-cornsers">
               <a href={record.Link} target="_blank" rel="noopener noreferrer">
-                <img src={portaNorte} alt={record.Name} />
+                <img src={record.imageUrl || questionSign} alt={record.Name} />
               </a>
             </td>
             <td>
@@ -49,9 +55,11 @@ const AirtableData = () => {
               </a>
               <p>{record.Mission}</p>
               <br />
-              <a href="{record.Link}" target="_blank" rel="noopener noreferrer">
-                <img src={linkIcon} alt="Link website" id="social-icons" />
-              </a>
+              {record.Link && (
+                <a href={record.Link} target="_blank" rel="noopener noreferrer">
+                  <img src={linkIcon} alt="Link website" id="social-icons" />
+                </a>
+              )}
               {record.Twitter && (
                 <a
                   href={record.Twitter}
@@ -68,6 +76,15 @@ const AirtableData = () => {
                   rel="noopener noreferrer"
                 >
                   <img src={discordIcon} alt="Discord link" id="social-icons" />
+                </a>
+              )}
+              {record.Opensea && (
+                <a
+                  href={record.Opensea}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={openseaIcon} alt="Opensea link" id="social-icons" />
                 </a>
               )}
             </td>
@@ -78,11 +95,13 @@ const AirtableData = () => {
             </td>
             <td>
               <p>{record.Mission}</p>
-                </td>
-                <td>
-                <a href="{record.Link}" target="_blank" rel="noopener noreferrer">
-                <img src={linkIcon} alt="Link website" id="social-icons" />
-              </a>
+            </td>
+            <td>
+              {record.Link && (
+                <a href={record.Link} target="_blank" rel="noopener noreferrer">
+                  <img src={linkIcon} alt="Link website" id="social-icons" />
+                </a>
+              )}
               {record.Twitter && (
                 <a
                   href={record.Twitter}
@@ -100,17 +119,27 @@ const AirtableData = () => {
                 >
                   <img src={discordIcon} alt="Discord link" id="social-icons" />
                 </a>
+                    )}
+                    {record.Opensea && (
+                <a
+                  href={record.Opensea}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={openseaIcon} alt="Opensea link" id="social-icons" />
+                </a>
               )}
             </td>
-            {/* ... (add more table cells with Airtable data as needed) */}
-            <td className="td-right-corners">
-              <a
+            <td className="text-right">
+            {record.Application && (
+                    <a
                 href={record.Application}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className="cta">Join</button>
-              </a>
+                        </a>
+                    )}
             </td>
           </tr>
         ))}

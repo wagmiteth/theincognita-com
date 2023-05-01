@@ -13,8 +13,10 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <Hero />
-      <AirtableData />
+      <main className="container">
+        <Hero />
+        <AirtableData />
+      </main>
     </div>
   );
 };

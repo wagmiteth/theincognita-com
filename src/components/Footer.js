@@ -7,6 +7,7 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <p>theingcognita.com</p>
+          <br />
           <p>
             Made with love ❤️ by the community
             <br />

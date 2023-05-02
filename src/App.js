@@ -10,6 +10,7 @@ import TokenPage from './pages/TokenPage';
 import ApplyPage from './pages/ApplyPage';
 import HowToEstablishANetworkStatePage from './pages/Learn/HowToEstablishANetworkStatePage'; // Step 1: Import the component
 import PodcastsPage from './pages/Learn/PodcastsPage'; // Step 1: Import the component
+import TableChooser from './pages/TableChooserPage';
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/dao" element={<DaoPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/token" element={<TokenPage />} />
+          <Route path="/table-chooser" element={<TableChooser/>} />
           <Route path="/apply" element={<ApplyPage />} />
            {/* New route for the Learn pages */}
            <Route path="/learn/how-to-establish-a-network-state" element={<HowToEstablishANetworkStatePage />} />

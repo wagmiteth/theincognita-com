@@ -1,13 +1,12 @@
-// HomePage.js
+// TableChooserPage.js
 import React from "react";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import "../pages/css/HomePage.css"; // Assuming you have a separate CSS file for styling
 import "../App.css";
-import TableHomepage from "../components/TableHomepage";
-import Hero from "../components/Hero";
+import TableChooser from "../components/TableChooser";
 
 
-const HomePage = () => {
+const TableChooserPage = () => {
   useDocumentTitle(
     "The Incognita | Network state mapping | Most accurate stats"
   );
@@ -15,10 +14,11 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <main className="container">
-        <Hero />
-        <TableHomepage />
+   
+        <TableChooser />
+
       </main>
     </div>
   );
 };
-export default HomePage;
+export default TableChooserPage;

@@ -113,3 +113,39 @@ table {
   .container-table {
     width: 150px;
   }
+
+  /* multi select container */
+  .multiselect-container {
+    display: flex;
+  }
+  
+  .multiselect-option {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .multiselect-option.selected {
+    background-color: #ccc;
+  }
+  
+  .selected-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .selected-option {
+    margin: 5px;
+    padding: 5px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+  }
+  
+  .remove-option {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  

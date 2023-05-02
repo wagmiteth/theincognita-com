@@ -1,14 +1,15 @@
-// AirtableData.js
+// TableHomepage.js
 import React, { useState, useEffect } from "react";
 import base from "../Airtable";
 import questionSign from "../assets/nodeIcons/questionSign60x60.png";
-import "./css/AirtableData.css";
+import "./css/TableHomepage.css";
 import linkIcon from "../assets/link60x60.png";
 import twitterIcon from "../assets/twitter60x60.png";
 import discordIcon from "../assets/discord60x60.png";
 import openseaIcon from "../assets/Opensea.png";
+import TableHeader from "./TableHeader";
 
-const AirtableData = () => {
+const TableHomepage = () => {
   const [records, setRecords] = useState([]);
 
   useEffect(() => {
@@ -25,11 +26,12 @@ const AirtableData = () => {
         console.error("Error fetching data from Airtable:", error);
       }
     };
-
     fetchRecords();
   }, []);
 
   return (
+    <>
+      <TableHeader count = {records.length} />
     <table>
       <thead>
         <tr>
@@ -144,8 +146,9 @@ const AirtableData = () => {
           </tr>
         ))}
       </tbody>
-    </table>
+      </table>
+      </>
   );
 };
 
-export default AirtableData;
+export default TableHomepage;

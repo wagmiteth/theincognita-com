@@ -10,8 +10,8 @@ const RoadmapPage = () => {
       <div className="container-content">
         <h1>The Incognita roadmap</h1>
         <h2>1. Claiming 1 commandment, brand and identity.</h2>
-        <p>✅ Establish domains and socials</p>
-        <p>✅ Website 1.0</p>
+        <p>✅ Establish domains and socials</p> <br />
+        <p>✅ Website 1.0</p> <br />
         <p>✅ Community Discord</p>
         <h2>2. Build recognition</h2>
         <p>-Comminicate with nodes</p>
@@ -27,8 +27,8 @@ const RoadmapPage = () => {
         <p>-Bounties</p>
         <h2>6. Crowdfund funds</h2>
         <h2>7. Website 2.0</h2>
-        <p>-WEB3 login</p>
-        <p>-Sorting mechanisms for nodes</p>
+        <p>-WEB3 login</p><br />
+        <p>-Sorting mechanisms for nodes</p><br />
         <p>-Live integrated node stats</p>
         <JoinDiscordButton />
       </div>

@@ -7,6 +7,8 @@ import TableHomepage from "../components/TableHomepage";
 import Hero from "../components/Hero";
 
 
+
+
 const HomePage = () => {
   useDocumentTitle(
     "The Incognita | Network state mapping | Most accurate stats"

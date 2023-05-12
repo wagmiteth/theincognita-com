@@ -21,51 +21,6 @@
 max-width: 400px;
 }
 
-/* CTA styling */
-
-.cta-general {
-  border: solid 1px var(--primary-color);
-  border-radius: 4px;
-  color: white;
-  background-color: var(--primary-color);
-  padding: 9px 16px;
-  cursor: pointer;
-  float: left;
-  text-decoration: none;
-  margin-top: 20px;
-}
-.cta-hero.left {
-  border: solid 1px var(--primary-color);
-  border-radius: 4px;
-  color: white;
-  background-color: var(--primary-color);
-  padding: 9px 16px;
-  cursor: pointer;
-  float: left;
-  
-}
-
-.cta-hero.right {
-  border: solid 1px;
-  border-radius: 4px;
-  color: var(--primary-color);
-  background-color: white;
-  padding: 9px 16px;
-  margin-left: 60px;
-  cursor: pointer;
-  float: left;
-}
-.cta-general:hover {
-  background-color: #5031f3;
-  color: white;
-}
-.cta-hero.left:hover {
-  background-color: #5031f3;
-}
-.cta-hero.right:hover {
-  background-color: #5031f3;
-  color: white;
-}
 
 .hero-right {
     text-align: center;

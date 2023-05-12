@@ -1,6 +1,7 @@
 import React from "react";
 import hero from "../assets/theIncognitaHero.jpeg";
-import { Link } from 'react-router-dom';
+import JoinDiscordButtonHomepage from "./JoinDiscordButtonHomepage";
+import GetListedButton from "./GetListedButton";
 
 const Hero = () => {
     return (
@@ -10,14 +11,8 @@ const Hero = () => {
             <h1>The Incognita</h1>
             <h2>Mapping the most accurate stats for aspiring Network States</h2>
             <div className="cta-container">
-            <Link to="/apply">
-              <button className="cta-hero left" id="openPopup">
-              Get Listed
-                </button>
-                </Link>
-              <a href="https://discord.gg/EyvF2fEqWT" target="_blank" rel="noreferrer">
-                <button className="cta-hero right">Join Discord</button>
-              </a>
+           <GetListedButton />
+                <JoinDiscordButtonHomepage />
             </div>
           </div>
           <div className="hero-wrapper">

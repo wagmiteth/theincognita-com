@@ -1,10 +1,10 @@
 import Button from '@mui/material/Button';
 
-function JoinDiscordButton() {
+function JoinDiscordButtonHomepage() {
   return (
     <div>
       <a href="https://discord.gg/EyvF2fEqWT" target="_blank" rel="noreferrer">
-      <Button variant="contained" color="primary" sx={{marginTop: 2}}>
+        <Button variant="outlined" color="primary" sx={{ marginLeft: 4}}>
         Join Discord
       </Button>
       </a>
@@ -12,4 +12,4 @@ function JoinDiscordButton() {
   );
 }
 
-export default JoinDiscordButton;
+export default JoinDiscordButtonHomepage;

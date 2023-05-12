@@ -1,6 +1,5 @@
 
-
-
+/* Multiselect.css */
 /*Tabble starts here*/
 p{
     display: contents;
@@ -22,9 +21,13 @@ table {
     padding: 2px;
   }
   
-  tr:nth-child(even) {
+  tr:nth-child(even) td {
     background-color: white;
   }
+
+
+
+
   .td-left-corners {
     border-radius: 10px 0px 0px 10px;
   }

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import base from "../Airtable";
 import questionSign from "../assets/nodeIcons/questionSign60x60.png";
-import "./css/TableHomepage.css";
 import linkIcon from "../assets/link60x60.png";
 import twitterIcon from "../assets/twitter60x60.png";
 import discordIcon from "../assets/discord60x60.png";

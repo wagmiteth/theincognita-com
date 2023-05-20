@@ -1,7 +1,7 @@
 // TableChooser.js 
 import React, { useState, useEffect } from "react";
 import base from "../Airtable";
-import "./css/Multiselect.css";
+// import "./css/Multiselect.css";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 

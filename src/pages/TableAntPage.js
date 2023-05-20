@@ -1,16 +1,11 @@
-// HomePage.js
+// TableAntPage.js
 import React from "react";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import "../pages/css/HomePage.css"; // Assuming you have a separate CSS file for styling
 import "../App.css";
-// import TableHomepage from "../components/TableHomepage";
-import Hero from "../components/Hero";
-import TableReactPage from "./TableReactPage";
+import TableAnt from "../components/TableAnt";
 
-
-
-
-const HomePage = () => {
+const TableAntPage = () => {
   useDocumentTitle(
     "The Incognita | Network state mapping | Most accurate stats"
   );
@@ -18,10 +13,10 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <main className="container">
-        <Hero />
-        <TableReactPage />
+           
+        <TableAnt />
       </main>
     </div>
   );
 };
-export default HomePage;
+export default TableAntPage;

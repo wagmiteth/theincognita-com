@@ -37,7 +37,7 @@ const fetchAndCall = () => {
                 }
                 // update the 'openseaFloor' field
                 base('ListOfNodes').update(record.id, {
-                  "openseaFloor": data.price
+                  "FloorPrice": data.price
                 }, function(err, record) {
                   if (err) {
                     return; // Removed console.error

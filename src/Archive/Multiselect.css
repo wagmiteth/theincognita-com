@@ -1,6 +1,8 @@
 
 /* Multiselect.css */
 /*Tabble starts here*/
+
+
 p{
     display: contents;
 }
@@ -152,3 +154,24 @@ table {
     cursor: pointer;
   }
   
+  /* Extended sectio*/
+  .extended-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1;
+    margin-right: 10px;
+  }
+  /* Styles for mobile view */
+@media (max-width: 600px) {
+  .extended-section {
+    flex-direction: column;
+  }
+
+  .column {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+} /*

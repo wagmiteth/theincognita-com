@@ -89,6 +89,12 @@ const Navbar = () => {
             </div>
             <ul className="menu">
             <li className="menu-item">
+                <Link to="/table-react">Table React</Link>
+              </li>
+            <li className="menu-item">
+                <Link to="/table-ant">Table Ant</Link>
+              </li>
+            <li className="menu-item">
                 <Link to="/table-chooser">Table Chooser</Link>
               </li>
               <li className="menu-item">

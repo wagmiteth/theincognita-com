@@ -1,0 +1,68 @@
+/* TableReact.css */
+.TableReact {
+    background-color: white;
+    border-spacing: 0;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+.Links {
+  min-width: 170px;
+} 
+
+.extended-div {
+  background-color: var(--background-color);
+  height: 10px;
+  padding-left: 10px;
+}
+
+th,
+td {
+  padding: 10px 10px;
+}
+
+.ShowMoreRow{
+    background-color: #F4F5F8;
+}
+
+.base{
+    margin-left: 70px;
+}
+
+  .logo-links-container {
+    display: flex;
+    align-items: center; /* If you want to align them vertically centered */
+    gap: 0px; /* If you want to add some gap between them */
+  }
+  
+  .LinksExpanded{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+#logos{
+  vertical-align: top;
+    height: 37px;
+    margin: 2px 2px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+#logos:hover {
+  border: 1px solid black;
+}
+
+  #social-icons {
+    height: 24px;
+    margin: 2px 2px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 50%;
+  }
+  #social-icons:hover {
+    border: 1px solid black;
+  }

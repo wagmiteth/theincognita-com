@@ -1,0 +1,62 @@
+#social-icons {
+  height: 22px;
+  margin: 0 2px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+#social-icons:hover {
+  border: 1px solid black;
+}
+
+.ant-table-cell {
+  padding: 4px;
+}
+
+  /* Add this style for the CTA button */
+  .cta {
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    padding: 9px 16px;
+    margin-right: 2px;
+    cursor: pointer;
+  }
+  .cta:hover {
+    background-color: var(--hover-color);
+  }
+
+  p {
+    display: inline-block;
+    margin: 0px 0px;
+  }
+
+  .base p {
+    display: block;
+    margin: 0px 0px;
+  }
+
+  .extended-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+.row-light,
+.row-dark {
+  height: 50px; /* Adjust this value as needed */
+}
+
+.ant-table-expanded-row {
+  height: 10px; /* Adjust this value as needed */
+  padding: 0 !important;
+}
+
+.ant-table {
+  overflow: initial;
+}
+
+.ant-table tbody.ant-table-tbody > tr:last-child td {
+  border: none;
+}

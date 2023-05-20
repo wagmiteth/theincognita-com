@@ -7,7 +7,13 @@ const theme = createTheme({
       main: '#3a10e5', // Customize your primary color here
     },
     secondary: {
-      main: '#dc004e', // Customize your secondary color here
+      main: '##FFFFFF', // Customize your secondary color here
+    },
+    additionalColor: {
+      main: '#fff2e4', // Add your color here
+    },
+    text: {
+      main: '#10162f', // Customize your secondary color here
     },
   },
   // Add more customization options if needed

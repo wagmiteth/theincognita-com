@@ -1,4 +1,5 @@
-Welcome to theIcognita.com - Open source dasboard for aspiring Network States
+<h1>Welcome to theIcognita.com 👋</h1>
+- Open source dasboard for aspiring Network States
 
 Join us at <a href="https://discord.gg/EyvF2fEqWT" target="_blank">Discord</a>
 

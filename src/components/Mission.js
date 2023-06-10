@@ -6,12 +6,17 @@ const Mission = ({ record, isExpanded, linksComponent }) => (
     <strong>{record.NodeName}</strong>
     <br />
     {isExpanded ? (
-      <p>{record.expandedMission}</p>
-    ) : (
       <>
+        <p>{record.expandedMission}</p>
+        <div className="JoinExpanded-container">
+        </div>
+      </>
+    ) : (
+      <div className="MissionContent">
         <p>{record.Mission}</p>
         {linksComponent}
-      </>
+
+      </div>
     )}
   </div>
 );

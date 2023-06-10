@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useTable, useSortBy, usePagination, useExpanded } from "react-table";
-import ShowMoreRow from "./ShowMoreRow";
+import Bases from "./Bases";
 
 const TableReact = ({ columns, data }) => {
   const {
@@ -69,6 +69,10 @@ const TableReact = ({ columns, data }) => {
                         className={
                           cellIndex === 0
                             ? "first-cell"
+                            : cellIndex === 1
+                            ? "second-cell"
+                            : cellIndex === 2
+                            ? "third-cell"
                             : cellIndex === row.cells.length - 1
                             ? "last-cell"
                             : ""
@@ -90,8 +94,7 @@ const TableReact = ({ columns, data }) => {
                 {row.isExpanded ? (
                   <React.Fragment>
                     <tr className="expanded-content">
-                      <td className="ShowMoreRow" colSpan={6}>
-                        <ShowMoreRow record={row.original} />
+                      <td className="Bases" colSpan={6}>
                       </td>
                     </tr>
                     <tr className="extended-div">

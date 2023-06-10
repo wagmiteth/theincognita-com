@@ -8,6 +8,8 @@ import Links from "../components/Links";
 import Logos from "../components/Logos";
 import Mission from "../components/Mission";
 import LinksExpanded from "../components/LinksExpanded";
+import Bases from "../components/Bases";
+import BasesExpanded from "../components/BasesExpanded";
 
 const TableReactPage = () => {
   const [records, setRecords] = useState([]);
@@ -32,17 +34,6 @@ const TableReactPage = () => {
 
   const columns = [
     {
-      Header: "Logos",
-      accessor: "Logos",
-      Cell: ({ row }) => (
-        <div className="logo-links-container">
-          {!row.isExpanded && <Logos record={row.original} />}
-          {!row.isExpanded && <Links record={row.original} />}
-          {row.isExpanded && <LinksExpanded record={row.original} />}
-        </div>
-      ),
-    },
-    {
       Header: "Mission",
       accessor: "Mission",
       Cell: ({ row }) => (
@@ -50,10 +41,24 @@ const TableReactPage = () => {
       ),
     },
     {
-      Header: "Application",
-      accessor: "Application",
-      Cell: ({ row }) => <ApplicationButton record={row.original} />,
+      Header: "Links",
+      accessor: "Links",
+      Cell: ({ row }) => (
+        row.isExpanded 
+        ? <div className="LinksExpanded"><LinksExpanded record={row.original} /></div>
+        : <div className="Links"><Links record={row.original} /></div>
+      ),
     },
+    {
+      Header: "Bases",
+      accessor: "Bases",
+      Cell: ({ row }) => (
+        row.isExpanded 
+        ? <div className="BasesExpanded"><BasesExpanded record={row.original} /></div>
+        : <div className="Bases"><Bases record={row.original} /></div>
+      ),
+    },    
+     
   ];
 
   return (

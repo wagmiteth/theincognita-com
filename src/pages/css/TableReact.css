@@ -8,10 +8,17 @@
     background-color: #f2f2f2;
   }
 
+  .td {
+    vertical-align: top;
+  }
+
 .Links {
-  min-width: 170px;
+  min-width: 159px;
 } 
 
+/* .base p {
+  display: contents;
+} */
 .extended-div {
   background-color: var(--background-color);
   height: 10px;
@@ -27,9 +34,7 @@ td {
     background-color: #F4F5F8;
 }
 
-.base{
-    margin-left: 70px;
-}
+
 
   .logo-links-container {
     display: flex;
@@ -37,17 +42,13 @@ td {
     gap: 0px; /* If you want to add some gap between them */
   }
   
-  .LinksExpanded{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
+
+
+
 
 #logos{
   vertical-align: top;
-    height: 37px;
+    height: 34px;
     margin: 2px 2px;
     border: 1px solid gray;
     border-radius: 50%;
@@ -66,3 +67,45 @@ td {
   #social-icons:hover {
     border: 1px solid black;
   }
+
+
+
+  .first-cell{
+    vertical-align: top;
+    align-items: flex-start;
+  }
+
+  .second-cell{
+    vertical-align: top;
+    align-items: flex-start;
+    min-width: 120px;
+  }
+
+  .third-cell{
+    vertical-align: top;
+    align-items: flex-start;
+  }
+
+  #expanded-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .MissionContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mission{
+    vertical-align: center;
+    align-items: flex-start;
+  }
+  
+  .emoji {
+    font-size: 2rem; /* Adjust as needed */
+  }
+  
+  
+  
+  

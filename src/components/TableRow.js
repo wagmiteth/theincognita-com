@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import questionSign from "../assets/nodeIcons/questionSign60x60.png";
 import SocialIcons from "./SocialIcons";
-import ShowMoreRow from "./ShowMoreRow";
+import Bases from "./Bases";
 
 const TableRow = ({ record }) => {
   const [showMore, setShowMore] = useState(false);
@@ -33,7 +33,7 @@ const TableRow = ({ record }) => {
           <br />
           <SocialIcons record={record} />
           <br />
-         <ShowMoreRow showMore={showMore} record={record} />
+         <Bases showMore={showMore} record={record} />
         </td>
         <td>
           <a href={record.Link} target="_blank" rel="noopener noreferrer">
@@ -49,7 +49,7 @@ const TableRow = ({ record }) => {
             {showMore ? "Hide more" : "Show more"}
           </span>
           <br />
-          <ShowMoreRow showMore={showMore} record={record} />
+          <Bases showMore={showMore} record={record} />
 
         </td>
         <td>

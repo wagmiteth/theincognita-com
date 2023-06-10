@@ -1,13 +1,4 @@
-#social-icons {
-  height: 22px;
-  margin: 0 2px;
-  padding: 5px;
-  border: 1px solid gray;
-  border-radius: 50%;
-}
-#social-icons:hover {
-  border: 1px solid black;
-}
+
 
 .ant-table-cell {
   padding: 4px;

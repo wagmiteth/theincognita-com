@@ -2,18 +2,14 @@
 import React from "react";
 import Badge from '@mui/material/Badge';
 import discordIcon from "../assets/discord60x60.png";
-import linkIcon from "../assets/link60x60.png";
 import twitterIcon from "../assets/twitter60x60.png";
 import openseaIcon from "../assets/Opensea.png";
+import Logos from "./Logos";
 
 
 const Links = ({ record }) => (
-  <div className="Links">
-  {record.Link && (
-    <a href={record.Link} target="_blank" rel="noopener noreferrer">
-      <img src={linkIcon} alt="Link website" id="social-icons" />
-    </a>
-  )}
+  <>
+  <Logos record={record} />
   {record.Twitter && (
     <a href={record.Twitter} target="_blank" rel="noopener noreferrer">
       <img src={twitterIcon} alt="Twitter link" id="social-icons" />
@@ -33,8 +29,7 @@ const Links = ({ record }) => (
           <img src={openseaIcon} alt="Opensea link" id="social-icons" />
         </Badge>
       </a>
-    )}
-</div>
+    )}</>
 );
 
 export default Links;

@@ -6,7 +6,7 @@ import base from "../Airtable";
 import Links from "./Links";
 import Logos from "./Logos";
 import ApplicationButton from "./ApplicationButton";
-import ShowMoreRow from "./ShowMoreRow";
+import Bases from "./Bases";
 
 const TableAnt = () => {
   const [records, setRecords] = useState([]);
@@ -74,7 +74,7 @@ const TableAnt = () => {
       }
       expandable={{
         expandedRowRender: (record) => (
-          <ShowMoreRow record={record} />
+          <Bases record={record} />
         ),
         rowExpandable: (record) => true,
         onExpand: handleExpand,

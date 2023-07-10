@@ -14,7 +14,9 @@ const Bases = ({ record }) => {
     if (base.includes("Africa")) {
       return <span className='emoji'>🌍</span>;
     } else if (base.includes("Global")) {
-      return <span className='emoji'>🛬</span>;
+      return <span className='emoji'>🗺️</span>;
+    } else if (base.includes("Canada")) {
+      return <span className='emoji'>🇨🇦</span>;
     } else if (base.includes("North America")) {
       return <span className='emoji'>🌎</span>;
     } else if (base.includes("Latin America")) {

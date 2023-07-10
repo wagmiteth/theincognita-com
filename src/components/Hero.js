@@ -5,7 +5,7 @@ import GetListedButton from "./GetListedButton";
 
 const Hero = () => {
     return (
-      <main className="container">
+
         <section className="hero">
           <div className="hero-left">
             <h1>The Incognita</h1>
@@ -21,7 +21,6 @@ const Hero = () => {
             </div>
           </div>
         </section>
-      </main>
     );
 };
   

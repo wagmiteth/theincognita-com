@@ -36,10 +36,26 @@ const TableReactPage = () => {
     {
       Header: "Mission",
       accessor: "Mission",
-      Cell: ({ row }) => (
-        <Mission record={row.original} isExpanded={row.isExpanded} />
-      ),
+      Cell: ({ row }) => {
+        const onToggleRowExpanded = () => {
+          row.toggleRowExpanded(!row.isExpanded);
+        };
+        return (
+          <div>
+            <Mission record={row.original} isExpanded={row.isExpanded} />
+              <span
+                {...row.getToggleRowExpandedProps()}
+                onClick={onToggleRowExpanded}
+                className="showMoreSpan"
+              >
+                {row.isExpanded ? "Show less" : "Show more"}
+              </span>
+          </div> 
+        );
+        
+      },
     },
+  
     {
       Header: "Links",
       accessor: "Links",
@@ -58,8 +74,8 @@ const TableReactPage = () => {
         : <div className="Bases"><Bases record={row.original} /></div>
       ),
     },    
-     
   ];
+  
 
   return (
     <div className="home-page">

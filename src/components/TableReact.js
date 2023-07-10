@@ -34,7 +34,7 @@ const TableReact = ({ columns, data }) => {
       <table
         className="TableReact"
         {...getTableProps()}
-        style={{ margin: "0 auto", width: "80%" }}
+        style={{ margin: "0 auto", width: "99%" }}
       >
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -82,14 +82,7 @@ const TableReact = ({ columns, data }) => {
                       </td>
                     );
                   })}
-                  <td>
-                    <span
-                      {...row.getToggleRowExpandedProps()}
-                      onClick={onToggleRowExpanded}
-                    >
-                      {row.isExpanded ? "⬆️" : "⬇️"}
-                    </span>
-                  </td>
+                 
                 </tr>
                 {row.isExpanded ? (
                   <React.Fragment>

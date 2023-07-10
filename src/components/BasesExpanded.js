@@ -14,7 +14,9 @@ const BasesExpanded = ({ record }) => {
     if (base.includes("Africa")) {
       return <><span key={index} className='emoji'>🌍</span><p>Africa</p></>;
     } else if (base.includes("Global")) {
-      return <><span key={index} className='emoji'>🛬</span><p>Global</p></>;
+      return <><span key={index} className='emoji'>🗺️</span><p>Global</p></>;
+    } else if (base.includes("Canada")) {
+      return <><span key={index} className='emoji'>🇨🇦</span><p>Canada</p></>;
     } else if (base.includes("North America")) {
       return <><span key={index} className='emoji'>🌎</span><p>North America</p></>;
     } else if (base.includes("Latin America")) {
